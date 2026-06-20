@@ -1,0 +1,46 @@
+// Student.java
+class Student {
+    private String name;
+    private String id;
+    private double cgpa;
+
+    // Setter methods
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setCgpa(double cgpa) {
+        this.cgpa = cgpa;
+    }
+
+    // Getter methods
+    public String getName() {
+        return name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public double getCgpa() {
+        return cgpa;
+    }
+}
+
+// Main.java
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.setName("Mohammed Maharaf Hossain");
+        s1.setId("E253001");
+        s1.setCgpa(3.85);
+
+        System.out.println("Student Name: " + s1.getName());
+        System.out.println("Student ID: " + s1.getId());
+        System.out.println("Student CGPA: " + s1.getCgpa());
+    }
+}
