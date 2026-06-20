@@ -1,0 +1,29 @@
+// showID.java
+class showID {
+    String name;
+    String idNumber;
+    String department;
+    String institution;
+
+    // Constructor
+    showID(String name, String idNumber, String department, String institution) {
+        this.name = name;
+        this.idNumber = idNumber;
+        this.department = department;
+        this.institution = institution;
+    }
+
+    // Method to display ID details
+    void displayID() {
+        System.out.println("Name: " + name);
+        System.out.println("ID Number: " + idNumber);
+        System.out.println("Department: " + department);
+        System.out.println("Institution: " + institution);
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        showID student1 = new showID("Mohammed Maharaf Hossain", "E253001", "CCE", "IIUC");
+        student1.displayID();
+    }
+}
