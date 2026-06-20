@@ -1,0 +1,34 @@
+// LibraryBook.java
+class LibraryBook {
+    String title;
+    String author;
+    int bookID;
+
+    // Constructor using 'this'
+    LibraryBook(String title, String author, int bookID) {
+        this.title = title;
+        this.author = author;
+        this.bookID = bookID;
+    }
+
+    // Display book info
+    void displayBookInfo() {
+        System.out.println("Title: " + this.title);
+        System.out.println("Author: " + this.author);
+        System.out.println("Book ID: " + this.bookID);
+        System.out.println("---------------------------");
+    }
+}
+
+// Main class
+public class MainLibrary {
+    public static void main(String[] args) {
+        LibraryBook book1 = new LibraryBook("Java Programming", "James Gosling", 1);
+        LibraryBook book2 = new LibraryBook("Effective Java", "Joshua Bloch", 2);
+        LibraryBook book3 = new LibraryBook("Clean Code", "Robert C. Martin", 3);
+
+        book1.displayBookInfo();
+        book2.displayBookInfo();
+        book3.displayBookInfo();
+    }
+}
