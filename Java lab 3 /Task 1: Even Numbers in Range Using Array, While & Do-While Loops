@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class EvenNumbersArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter starting number: ");
+        int start = sc.nextInt();
+        System.out.print("Enter ending number: ");
+        int end = sc.nextInt();
+
+        int[] evens = new int[(end - start) / 2 + 1];
+        int index = 0;
+
+        // Collect even numbers using while loop
+        int i = start;
+        while (i <= end) {
+            if (i % 2 == 0) {
+                evens[index++] = i;
+            }
+            i++;
+        }
+
+        // Print using do-while loop
+        int j = 0;
+        if (index > 0) {
+            do {
+                System.out.print(evens[j] + " ");
+                j++;
+            } while (j < index);
+        } else {
+            System.out.println("No even numbers in the range.");
+        }
+    }
+}
