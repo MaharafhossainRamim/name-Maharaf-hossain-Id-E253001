@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class PrimeNumbersArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter starting number: ");
+        int start = sc.nextInt();
+        System.out.print("Enter ending number: ");
+        int end = sc.nextInt();
+
+        int[] primes = new int[end - start + 1];
+        int index = 0;
+
+        for (int i = start; i <= end; i++) {
+            if (isPrime(i)) {
+                primes[index++] = i;
+            }
+        }
+
+        System.out.println("Prime numbers in the range:");
+        for (int j = 0; j < index; j++) {
+            System.out.print(primes[j] + " ");
+        }
+    }
+
+    // Helper method to check primality
+    public static boolean isPrime(int num) {
+        if (num <= 1) return false;
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+}
